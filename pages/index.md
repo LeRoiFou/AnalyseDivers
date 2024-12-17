@@ -1,5 +1,5 @@
 <p class="titlecss"> Société ABC<br>
-Analyse financière - exercice 2023 </p>
+Analyse sur les marchandises - exercice 2023 </p>
 
 <br>
 
@@ -130,9 +130,6 @@ group by Intitule
     <Column id=Montant align=center totalAgg=sum fmt='#,##0.00,"K" "€"'/>
 </DataTable>
 
-<!-- Saut de page -->
-<div style="page-break-after: always;"></div>
-
 # 2. 2ème semestre 2023
 
 ## Ventes
@@ -232,7 +229,7 @@ from ${accounts707}
 limit 10
 ```
 
-<DataTable data={accounts707top10} totalRow=true>
+<DataTable data={accounts707top10} totalRow=true sort=Montant>
     <Column id=EcritureDate title=Date align=center totalAgg="Montant moyen de ces ventes" fmt='dd/mm/yyyy'/>
     <Column id=Montant align=center totalAgg=mean contentType=colorscale colorScale=info fmt='#,##0.00,"K" "€"'/>
 </DataTable>
@@ -247,7 +244,7 @@ from ${accounts607}
 limit 10
 ```
 
-<DataTable data={accounts607top10} totalRow=true>
+<DataTable data={accounts607top10} totalRow=true sort=Montant>
     <Column id=EcritureDate title=Date align=center totalAgg="Montant moyen de ces achats" fmt='dd/mm/yyyy'/>
     <Column id=Montant align=center totalAgg=mean contentType=colorscale colorScale=negative fmt='#,##0.00,"K" "€"'/>
 </DataTable>
